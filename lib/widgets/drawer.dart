@@ -6,7 +6,7 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageUrl = "";
+    final imageUrl = "https://avatars.githubusercontent.com/u/127924535?v=4";
 
     return Drawer(
       child: Container(
@@ -20,8 +20,9 @@ class MyDrawer extends StatelessWidget {
                 child: UserAccountsDrawerHeader(
                     accountName: Text("Vijay Saxena"),
                     accountEmail: Text("saxenavijay789@gmail.com"),
-                    currentAccountPicture: Image.network(
-                        "https://upload.wikimedia.org/wikipedia/commons/d/d0/Vijay_Deverakonda_at_NOTA_pressmeet_%28cropped%29.jpg"))),
+                    currentAccountPicture: CircleAvatar(
+                      backgroundImage: NetworkImage(imageUrl),
+                    ))),
             ListTile(
               leading: Icon(
                 CupertinoIcons.home,
